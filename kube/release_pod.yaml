@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: release-nginx
+  labels:
+    name: release-nginx
+spec:
+  containers:
+  - name: release-nginx
+    image: fardin31/cloudethix_release_nginx_fardin:v1
+    ports:
+      - containerPort: 80
