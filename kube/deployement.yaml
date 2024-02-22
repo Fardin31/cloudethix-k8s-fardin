@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-webapp
+spec:
+  selector:
+    matchLabels:
+      app: flask-webapp
+  replicas: 3    
+  template:
+    metadata:
+      labels:
+        app: flask-webapp
+    spec:
+      containers:
+      - name: flask-webapp
+        image: fardin31/flask_webapp_fardin:v3
+        ports:
+        - containerPort: 8080
